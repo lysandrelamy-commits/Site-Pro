@@ -1055,3 +1055,168 @@ body, p, li, span    { color: #C8E6D8 !important; }
 
 /* ── SECTION TAG ── */
 .section-tag         { background: rgba(0,180,216,.12) !important; color: #00D4FF !important; }
+
+
+
+/* ============================================================
+   REFONTE CONTACT + COINS ARRONDIS + FOND + POLICES BLANCHES
+   ============================================================ */
+
+/* ── FOND ÉCLAIRCI ── */
+body           { background: #1A3028 !important; }
+.services      { background: #1E3830 !important; }
+.why           { background: #1A3028 !important; }
+.process       { background: #1E3830 !important; }
+.contact       { background: #1A3028 !important; }
+.hero          { background: #1A3028 !important; }
+#navbar        { background: rgba(20,40,32,.97) !important; }
+.footer        { background: #0F2018 !important; }
+
+/* ── COINS ARRONDIS GLOBAUX ── */
+.service-card,
+.step,
+.flow-card,
+.metrics-box,
+.contact-form,
+.why-icon,
+.hero-badge,
+.sc-badge,
+.section-tag,
+.btn-primary,
+.btn-ghost,
+.btn-nav       { border-radius: 18px !important; }
+
+.form-group input,
+.form-group select,
+.form-group textarea { border-radius: 12px !important; }
+
+.btn-primary,
+.btn-ghost,
+.btn-nav       { border-radius: 50px !important; }
+
+/* ── POLICES DES ENCADRÉS EN BLANC ── */
+.service-card h3,
+.service-card p,
+.sc-list li,
+.step h3,
+.step p,
+.why-item strong,
+.why-item p,
+.metrics-title,
+.metric-label,
+.flow-card .fc-text strong,
+.flow-card .fc-text small  { color: #FFFFFF !important; }
+
+.sc-list li::before,
+.sc-link,
+.step-num      { color: #00D4FF !important; }
+
+/* ── FORMULAIRE CONTACT REFONDU ── */
+.contact-inner {
+  display: grid !important;
+  grid-template-columns: 1fr 1.5fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
+
+.contact-form {
+  background: #102A1C !important;
+  border: 1px solid #1E4A32 !important;
+  border-radius: 24px !important;
+  padding: 40px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+}
+
+/* Ligne horizontale : label à gauche, champ à droite */
+.form-row-inline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Chaque groupe label + input en colonne */
+.form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.form-group label {
+  font-family: 'Syne', sans-serif !important;
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  color: #00D4FF !important;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #0A1C12 !important;
+  border: 2px solid #1E5040 !important;
+  border-radius: 12px !important;
+  color: #FFFFFF !important;
+  padding: 14px 18px !important;
+  font-size: .95rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  transition: border-color .25s ease, box-shadow .25s ease !important;
+  width: 100% !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #3A6B52 !important;
+  font-style: italic !important;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #2A7055 !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00D4FF !important;
+  box-shadow: 0 0 0 4px rgba(0,212,255,.12) !important;
+  outline: none !important;
+}
+
+.form-group textarea {
+  resize: vertical !important;
+  min-height: 110px !important;
+}
+
+/* Option select lisible */
+.form-group select option {
+  background: #0A1C12 !important;
+  color: #FFFFFF !important;
+}
+
+/* Bouton submit pleine largeur */
+.btn-full {
+  width: 100% !important;
+  justify-content: center !important;
+  padding: 16px !important;
+  font-size: 1rem !important;
+  border-radius: 50px !important;
+  margin-top: 4px !important;
+}
+
+/* Message succès */
+.form-success {
+  background: rgba(0,212,255,.08) !important;
+  border: 1px solid rgba(0,212,255,.25) !important;
+  color: #A8EEE0 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+}
+
+/* ── RESPONSIVE FORMULAIRE ── */
+@media (max-width: 600px) {
+  .form-row-inline { grid-template-columns: 1fr !important; }
+}
