@@ -14,19 +14,19 @@
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#" class="logo">
-        <img src="Logo.png" alt="Flowmate Services" height="80" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pourquoi">Pourquoi nous</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn-nav">Demander une démo</a>
-      <button class="burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+    <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pourquoi">Pourquoi nous</a></li>
+    <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-nav">Demander une démo</a>
+    <a href="#" class="logo logo-nav">
+    <img src="Logo.png" alt="Flowmate Services" />
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <ul>
@@ -382,40 +382,51 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="#" class="logo">
-            <img src="Logo.png" alt="Flowmate Services" height="100" />
-          </a>
-          <p>Automatisation professionnelle pour les entreprises ambitieuses.</p>
-        </div>
-        <div class="footer-links">
-          <div class="fl-col">
-            <strong>Navigation</strong>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo logo-footer">
+          <img src="Logo.png" alt="Flowmate Services" />
+        </a>
+        <p>Automatisation professionnelle pour les entreprises ambitieuses.</p>
+      </div>
+      <div class="footer-links">
+        <div class="fl-col">
+          <strong>Navigation</strong>
+          <div class="fl-links-row">
             <a href="#accueil">Accueil</a>
+            <span class="fl-sep">|</span>
             <a href="#services">Services</a>
+            <span class="fl-sep">|</span>
             <a href="#pourquoi">Pourquoi nous</a>
+            <span class="fl-sep">|</span>
             <a href="#contact">Contact</a>
           </div>
-          <div class="fl-col">
-            <strong>Services</strong>
+        </div>
+        <div class="fl-col">
+          <strong>Services</strong>
+          <div class="fl-links-row">
             <a href="#services">Génération de devis</a>
+            <span class="fl-sep">|</span>
             <a href="#services">Relance impayés</a>
+            <span class="fl-sep">|</span>
             <a href="#services">Rapports d'activité</a>
+            <span class="fl-sep">|</span>
             <a href="#services">Sur mesure</a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© 2025 Flowmate Services. Tous droits réservés.</span>
-        <div class="footer-legal">
-          <a href="#">Mentions légales</a>
-          <a href="#">Politique de confidentialité</a>
-        </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Flowmate Services. Tous droits réservés.</span>
+      <div class="footer-legal">
+        <a href="#">Mentions légales</a>
+        <span class="fl-sep">|</span>
+        <a href="#">Politique de confidentialité</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="script.js"></script>
 </body>

@@ -824,3 +824,104 @@ h2 em          { color: #00B4D8 !important; }
     linear-gradient(rgba(0,180,216,.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0,180,216,.04) 1px, transparent 1px) !important;
 }
+
+
+/* ── LOGO NAVBAR DROITE ── */
+.nav-inner {
+  justify-content: flex-start !important;
+}
+.logo-nav {
+  margin-left: auto !important;
+  flex-shrink: 0;
+}
+.logo-nav img {
+  height: 160px !important;
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+}
+.logo-footer img {
+  height: 100px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+/* ── FOOTER LIENS EN LIGNE ── */
+.fl-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+.fl-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.fl-links-row a {
+  font-size: .88rem !important;
+  color: #8ABFAA !important;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+.fl-links-row a:hover { color: #00B4D8 !important; }
+.fl-sep {
+  color: #1E3528 !important;
+  font-size: .88rem;
+  user-select: none;
+}
+
+/* ── NAVBAR hauteur adaptée au grand logo ── */
+.nav-inner {
+  height: 170px !important;
+  align-items: center !important;
+}
+#navbar {
+  height: auto !important;
+}
+
+/* ── FORMULAIRE CONTACT — champs plus visibles ── */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #0F2318 !important;
+  border: 2px solid #2A5C40 !important;
+  border-radius: var(--radius) !important;
+  color: #D4EBE2 !important;
+  padding: 13px 16px !important;
+  font-size: .95rem !important;
+  transition: border-color var(--transition), box-shadow var(--transition) !important;
+}
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #3A8C60 !important;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00B4D8 !important;
+  box-shadow: 0 0 0 3px rgba(0,180,216,.18) !important;
+  outline: none !important;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #3A6B52 !important;
+  font-style: italic;
+}
+.form-group label {
+  color: #00B4D8 !important;
+  font-size: .85rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .03em;
+}
+.contact-form {
+  background: #0F2318 !important;
+  border: 1px solid #1E3528 !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,.3) !important;
+}
+
+/* Hero padding pour compenser la navbar plus haute */
+.hero {
+  padding-top: 190px !important;
+}
