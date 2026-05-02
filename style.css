@@ -1,27 +1,27 @@
-/* ============================================================
+: root/* ============================================================
    AUTOFLOW — STYLESHEET
    Palette : Blanc cassé, Bleu marine profond, Ardoise, Acier
    Typo : Syne (titres) + DM Sans (corps)
    ============================================================ */
 
 :root {
-  --navy:    #0F1D2E;
-  --navy-2:  #162639;
-  --slate:   #2C3E55;
-  --steel:   #4A6FA5;
-  --accent:  #3B82F6;
-  --accent-2:#1D64D8;
-  --light:   #F5F7FA;
-  --muted:   #8A9BB0;
-  --border:  #E2E8F0;
+  --navy:    #1A4A6E;
+  --navy-2:  #163D5C;
+  --slate:   #1A7A4A;
+  --steel:   #2D9A5F;
+  --accent:  #00B4D8;
+  --accent-2:#0090B0;
+  --light:   #F4F7F6;
+  --muted:   #7A9BAA;
+  --border:  #DDE8E4;
   --white:   #FFFFFF;
-  --text:    #1A2B3C;
-  --text-sm: #4A5568;
-  --success: #10B981;
+  --text:    #1A3040;
+  --text-sm: #4A6572;
+  --success: #1A7A4A;
   --radius:  12px;
   --radius-lg: 20px;
-  --shadow:  0 4px 24px rgba(15,29,46,.08);
-  --shadow-md: 0 8px 40px rgba(15,29,46,.13);
+  --shadow:  0 4px 24px rgba(26,74,110,.08);
+  --shadow-md: 0 8px 40px rgba(26,74,110,.13);
   --transition: 0.25s ease;
 }
 
@@ -141,12 +141,22 @@ h2 em { color: var(--accent); font-style: normal; }
   align-items: center;
   gap: 40px;
 }
+/* Remplacez le bloc .logo existant par ceci : */
 .logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: var(--navy);
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+  text-decoration: none;
+}
+.logo img {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+.logo-footer img {
+  height: 80px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 .logo span { color: var(--accent); }
 .nav-links {
