@@ -925,3 +925,133 @@ h2 em          { color: #00B4D8 !important; }
 .hero {
   padding-top: 190px !important;
 }
+
+
+/* ============================================================
+   MISE À JOUR VISUELLE — Lisibilité & contraste
+   ============================================================ */
+
+/* ── FOND GÉNÉRAL ÉCLAIRCI ── */
+body { background: #132318 !important; }
+.services  { background: #172B1E !important; }
+.why       { background: #132318 !important; }
+.process   { background: #172B1E !important; }
+.contact   { background: #132318 !important; }
+.hero      { background: #132318 !important; }
+
+/* ── TYPOGRAPHIE — meilleure lisibilité ── */
+h1, h2, h3, h4       { color: #F0FAF5 !important; }
+h2 em                { color: #00D4FF !important; }
+body, p, li, span    { color: #C8E6D8 !important; }
+.hero-desc           { color: #A8D4BC !important; font-size: 1.12rem !important; }
+.section-header p    { color: #A8D4BC !important; font-size: 1.05rem !important; }
+.why-left > p        { color: #A8D4BC !important; }
+.why-item p          { color: #A8D4BC !important; }
+.why-item strong     { color: #F0FAF5 !important; font-size: 1rem !important; }
+.step p              { color: #A8D4BC !important; }
+.contact-left > p    { color: #A8D4BC !important; }
+.ci-item             { color: #A8D4BC !important; }
+
+/* ── CARTES SERVICES — fond turquoise sombre qui ressort ── */
+.service-card {
+  background: #0D3D4A !important;
+  border: 1px solid #1A6070 !important;
+}
+.service-card:hover {
+  border-color: #00D4FF !important;
+  box-shadow: 0 8px 32px rgba(0,212,255,.15) !important;
+}
+.service-card h3     { color: #F0FAF5 !important; font-size: 1.15rem !important; }
+.service-card p      { color: #A8D8E8 !important; }
+.sc-list li          { color: #A8D8E8 !important; }
+.sc-list li::before  { color: #00D4FF !important; }
+.sc-link             { color: #00D4FF !important; font-weight: 600 !important; }
+.sc-badge            { background: rgba(0,212,255,.15) !important; color: #00D4FF !important; }
+
+/* Carte featured (populaire) */
+.sc-featured {
+  background: #0A4A5A !important;
+  border-color: #00D4FF !important;
+  box-shadow: 0 0 0 2px rgba(0,212,255,.2) !important;
+}
+
+/* Carte sur mesure */
+.sc-custom {
+  background: #051A10 !important;
+  border-color: #1A4030 !important;
+}
+.sc-custom h3,
+.sc-custom p         { color: #F0FAF5 !important; }
+.sc-cta-text         { color: #A8D4BC !important; }
+
+/* ── ÉTAPES (process) ── */
+.step {
+  background: #0D3D4A !important;
+  border-color: #1A6070 !important;
+}
+.step h3             { color: #F0FAF5 !important; }
+.step-num            { color: rgba(0,212,255,.25) !important; }
+
+/* ── SECTION POURQUOI — icônes ── */
+.why-icon            { background: #0D3D4A !important; }
+
+/* ── METRICS BOX ── */
+.metrics-box         { background: #071520 !important; border: 1px solid #0D3D4A; }
+.metrics-title       { color: #F0FAF5 !important; }
+.metric-label        { color: #A8D8E8 !important; }
+
+/* ── NAVBAR ── */
+#navbar              { background: rgba(13,35,24,.97) !important; border-bottom: 1px solid #1A4030 !important; }
+.nav-links a         { color: #A8D4BC !important; font-size: .95rem !important; }
+.nav-links a:hover   { color: #00D4FF !important; }
+.btn-nav             { background: #00B4D8 !important; color: #071520 !important; font-weight: 700 !important; }
+
+/* ── FOOTER — correction logo + lisibilité ── */
+.footer              { background: #071520 !important; }
+.logo-footer img {
+  height: 80px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter: none !important;
+  background: transparent !important;
+  display: block !important;
+}
+.footer-brand p      { color: #6B9E8A !important; }
+.fl-col strong       { color: #F0FAF5 !important; font-size: 1rem !important; }
+.fl-links-row a      { color: #7ABFAA !important; }
+.fl-links-row a:hover { color: #00D4FF !important; }
+.fl-sep              { color: #2A5040 !important; }
+.footer-bottom       { color: #4A7A62 !important; border-top: 1px solid #1A3528 !important; }
+.footer-legal a      { color: #4A7A62 !important; }
+.footer-legal a:hover { color: #00D4FF !important; }
+
+/* ── FORMULAIRE ── */
+.contact-form        { background: #0D2A1C !important; border-color: #1A4030 !important; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #091A10 !important;
+  border: 2px solid #1E5C40 !important;
+  color: #D4EBE2 !important;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00D4FF !important;
+  box-shadow: 0 0 0 3px rgba(0,212,255,.15) !important;
+}
+.form-group label    { color: #00D4FF !important; }
+
+/* ── BOUTONS ── */
+.btn-primary         { background: #00B4D8 !important; border-color: #00B4D8 !important; color: #071520 !important; font-weight: 700 !important; }
+.btn-primary:hover   { background: #00D4FF !important; border-color: #00D4FF !important; }
+.btn-ghost           { border-color: #2A5040 !important; color: #C8E6D8 !important; }
+.btn-ghost:hover     { border-color: #00D4FF !important; color: #00D4FF !important; }
+
+/* ── FLOW CARDS (hero) ── */
+.flow-card           { background: #0D3D4A !important; border-color: #1A6070 !important; }
+.fc-text strong      { color: #F0FAF5 !important; }
+.fc-text small       { color: #7ABFAA !important; }
+
+/* ── SECTION TAG ── */
+.section-tag         { background: rgba(0,180,216,.12) !important; color: #00D4FF !important; }
