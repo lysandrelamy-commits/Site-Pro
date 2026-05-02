@@ -701,3 +701,126 @@ h2 em { color: var(--accent); font-style: normal; }
   .footer-links { flex-direction: column; gap: 24px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+
+/* ============================================================
+   THEME SOMBRE GLOBAL — Flowmate Services
+   ============================================================ */
+
+body { background: #0B1A14 !important; color: #D4EBE2 !important; }
+
+/* Sections alternées */
+.services  { background: #0F2318 !important; }
+.why       { background: #0B1A14 !important; }
+.process   { background: #0F2318 !important; }
+.contact   { background: #0B1A14 !important; }
+.hero      { background: #0B1A14 !important; }
+
+/* Titres */
+h1, h2, h3, h4 { color: #E8F2EE !important; }
+h2 em          { color: #00B4D8 !important; }
+.hero-title .accent { color: #00B4D8 !important; }
+.hero-title em      { color: #8ABFAA !important; }
+.hero-desc          { color: #8ABFAA !important; }
+
+/* Navbar */
+#navbar {
+  background: rgba(11,26,20,.95) !important;
+  border-bottom: 1px solid #1E3528 !important;
+}
+.nav-links a        { color: #8ABFAA !important; }
+.nav-links a:hover  { color: #00B4D8 !important; }
+.btn-nav            { background: #1A7A4A !important; color: #E8F2EE !important; }
+.btn-nav:hover      { background: #00B4D8 !important; }
+
+/* Mobile menu */
+.mobile-menu        { background: #0F2318 !important; border-top: 1px solid #1E3528 !important; }
+.mobile-menu a      { color: #8ABFAA !important; border-bottom: 1px solid #1E3528 !important; }
+
+/* Hero stats */
+.stat strong        { color: #E8F2EE !important; }
+.stat span          { color: #6B9E8A !important; }
+.stat-divider       { background: #1E3528 !important; }
+.hero-badge         { background: rgba(0,180,216,.1) !important; border-color: rgba(0,180,216,.25) !important; color: #00B4D8 !important; }
+
+/* Flow cards (hero) */
+.flow-card          { background: #152E20 !important; border-color: #1E3528 !important; }
+.fc-text strong     { color: #E8F2EE !important; }
+.fc-text small      { color: #6B9E8A !important; }
+
+/* Section tags */
+.section-tag        { background: rgba(0,180,216,.1) !important; color: #00B4D8 !important; }
+.section-header p   { color: #8ABFAA !important; }
+
+/* Boutons */
+.btn-primary        { background: #00B4D8 !important; border-color: #00B4D8 !important; color: #0B1A14 !important; }
+.btn-primary:hover  { background: #0090B0 !important; border-color: #0090B0 !important; }
+.btn-ghost          { border-color: #1E3528 !important; color: #D4EBE2 !important; }
+.btn-ghost:hover    { border-color: #00B4D8 !important; color: #00B4D8 !important; }
+
+/* Cartes services */
+.service-card       { background: #152E20 !important; border-color: #1E3528 !important; }
+.service-card:hover { border-color: rgba(0,180,216,.4) !important; }
+.service-card h3    { color: #E8F2EE !important; }
+.service-card p     { color: #8ABFAA !important; }
+.sc-list li         { color: #8ABFAA !important; }
+.sc-list li::before { color: #00B4D8 !important; }
+.sc-link            { color: #00B4D8 !important; }
+.sc-badge           { background: rgba(0,180,216,.15) !important; color: #00B4D8 !important; }
+.sc-featured        { background: linear-gradient(135deg, #152E20 60%, rgba(0,180,216,.07)) !important; border-color: #00B4D8 !important; }
+.sc-custom          { background: #060F0A !important; border-color: #1E3528 !important; }
+.sc-custom h3,
+.sc-custom p        { color: #E8F2EE !important; }
+.sc-cta-text        { color: #8ABFAA !important; }
+
+/* Section Pourquoi */
+.why-left > p       { color: #8ABFAA !important; }
+.why-item p         { color: #8ABFAA !important; }
+.why-item strong    { color: #E8F2EE !important; }
+.why-icon           { background: #152E20 !important; }
+.metrics-box        { background: #060F0A !important; }
+
+/* Étapes */
+.step               { background: #152E20 !important; border-color: #1E3528 !important; }
+.step h3            { color: #E8F2EE !important; }
+.step p             { color: #8ABFAA !important; }
+.step-num           { color: rgba(0,180,216,.2) !important; }
+.step-arrow         { color: #1E3528 !important; }
+
+/* Contact */
+.contact-left > p   { color: #8ABFAA !important; }
+.ci-item            { color: #8ABFAA !important; }
+.contact-form       { background: #152E20 !important; border-color: #1E3528 !important; }
+.form-group label   { color: #D4EBE2 !important; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #0F2318 !important;
+  border-color: #1E3528 !important;
+  color: #D4EBE2 !important;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #4A7A62 !important; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00B4D8 !important;
+  box-shadow: 0 0 0 3px rgba(0,180,216,.15) !important;
+}
+
+/* Footer */
+.footer             { background: #060F0A !important; }
+.footer-bottom      { border-top: 1px solid #1A2E22 !important; color: #4A7A62 !important; }
+.footer-legal a     { color: #4A7A62 !important; }
+.footer-legal a:hover { color: #00B4D8 !important; }
+.fl-col a           { color: #6B9E8A !important; }
+.fl-col a:hover     { color: #00B4D8 !important; }
+.fl-col strong      { color: #E8F2EE !important; }
+.footer-brand p     { color: #6B9E8A !important; }
+
+/* Grille de fond hero */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(0,180,216,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,180,216,.04) 1px, transparent 1px) !important;
+}
