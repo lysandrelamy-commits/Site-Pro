@@ -1238,3 +1238,11 @@ body           { background: #1A3028 !important; }
   border-radius: 18px;
   background: transparent;
 }
+
+
+.contact-inner {
+  display: grid !important;
+  grid-template-columns: 1fr 1.5fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
