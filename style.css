@@ -1220,3 +1220,21 @@ body           { background: #1A3028 !important; }
 @media (max-width: 600px) {
   .form-row-inline { grid-template-columns: 1fr !important; }
 }
+
+/* ── GOOGLE FORM INTÉGRÉ ── */
+.gform-wrapper {
+  background: #102A1C;
+  border: 1px solid #1E4A32;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.gform-wrapper iframe {
+  display: block;
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  border-radius: 18px;
+  background: transparent;
+}
