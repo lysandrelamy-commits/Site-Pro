@@ -1246,3 +1246,23 @@ body           { background: #1A3028 !important; }
   gap: 60px !important;
   align-items: start !important;
 }
+
+/* ── GOOGLE FORM RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+  .contact-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .contact-right {
+    width: 100% !important;
+  }
+  .gform-wrapper {
+    padding: 4px !important;
+    border-radius: 16px !important;
+  }
+  .gform-wrapper iframe {
+    min-height: 750px !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+  }
+}
