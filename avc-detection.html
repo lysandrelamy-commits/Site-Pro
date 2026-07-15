@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Détection d'AVC — Edge AI | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        blue: { 950: '#0A1220', 900: '#0F1B2E', 850: '#132340' },
+        amber: { 400: '#FFB020', 500: '#F59300' },
+      },
+      fontFamily: {
+        display: ['Space Grotesk', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body class="bg-blue-950 text-slate-300 font-display antialiased">
+
+<div class="fixed inset-0 bg-blueprint-grid pointer-events-none z-0"></div>
+
+<nav class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur-md bg-blue-950/85">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="../index.html" class="font-mono text-xs tracking-wider text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+      ← RETOUR AU PORTFOLIO
+    </a>
+    <a href="https://github.com/" target="_blank" class="text-xs font-mono px-4 py-2 bg-amber-400 text-blue-950 rounded font-semibold hover:bg-amber-300 transition-colors">
+      GitHub Repo ↗
+    </a>
+  </div>
+</nav>
+
+<header class="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-16">
+  <div class="flex flex-wrap gap-2 mb-6 font-mono text-[11px]">
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">COMPUTER VISION</span>
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">PYTORCH</span>
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">SÉCURITÉ &amp; MOBILE</span>
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">ARCHITECTURE</span>
+  </div>
+  <h1 class="font-display text-3xl md:text-5xl font-semibold text-white leading-tight max-w-3xl">
+    Dispositif Médical Mobile : Détection d'AVC<br />
+    <span class="text-amber-400">par Computer Vision &amp; Edge AI</span>
+  </h1>
+</header>
+
+<div class="sticky top-16 z-40 border-y border-white/5 bg-blue-950/95 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 flex gap-1 overflow-x-auto font-mono text-xs">
+    <button data-tab="system-architecture-block" class="tab-btn active whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">ARCHITECTURE SYSTÈME</button>
+    <button data-tab="ai-model-block" class="tab-btn whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">MODÈLE IA &amp; INFÉRENCE</button>
+    <button data-tab="security-compliance-block" class="tab-btn whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">SÉCURITÉ &amp; NORMES</button>
+    <button data-tab="app-demo-gallery" class="tab-btn whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">DÉMONSTRATION UI</button>
+  </div>
+</div>
+
+<main class="relative z-10 max-w-6xl mx-auto px-6 py-16">
+
+  <section id="system-architecture-block" class="tab-panel">
+    <div class="font-mono text-xs text-amber-400 mb-4">// ARCHITECTURE</div>
+    <h2 class="font-display text-2xl text-white mb-6">Architecture Système</h2>
+
+    <div class="placeholder-card mb-6" data-reveal>
+      <!-- TODO: Insérer le schéma d'architecture global (Frontend Mobile, Traitement Local, Gestion mémoire, Flux de données) -->
+      <p class="text-slate-500 text-sm">Emplacement réservé : schéma d'architecture global de l'application.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails Frontend Mobile (framework, UX) -->
+        <p class="text-slate-500 text-sm">Frontend Mobile</p>
+      </div>
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails traitement local / gestion mémoire -->
+        <p class="text-slate-500 text-sm">Traitement Local &amp; Mémoire</p>
+      </div>
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails flux de données -->
+        <p class="text-slate-500 text-sm">Flux de Données</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-model-block" class="tab-panel hidden">
+    <div class="font-mono text-xs text-amber-400 mb-4">// MODÈLE</div>
+    <h2 class="font-display text-2xl text-white mb-6">Modèle IA &amp; Inférence</h2>
+
+    <div class="placeholder-card mb-6" data-reveal>
+      <!-- TODO: Détails du réseau CNN (PyTorch) — architecture, dataset, entraînement -->
+      <p class="text-slate-500 text-sm">Emplacement réservé : détails du réseau CNN (PyTorch).</p>
+    </div>
+
+    <div class="placeholder-card" data-reveal>
+      <!-- TODO: Détails optimisation pour l'inférence mobile temps réel (Edge AI / ONNX / TFLite) -->
+      <p class="text-slate-500 text-sm">Emplacement réservé : optimisation Edge AI / ONNX / TFLite.</p>
+    </div>
+  </section>
+
+  <section id="security-compliance-block" class="tab-panel hidden">
+    <div class="font-mono text-xs text-amber-400 mb-4">// CONFORMITÉ</div>
+    <h2 class="font-display text-2xl text-white mb-6">Sécurité &amp; Normes</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails chiffrement des données (au repos / en transit) -->
+        <p class="text-slate-500 text-sm">Emplacement réservé : chiffrement des données.</p>
+      </div>
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails conformité ISO 13485 et RGPD -->
+        <p class="text-slate-500 text-sm">Emplacement réservé : conformité médicale (ISO 13485) &amp; RGPD.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="app-demo-gallery" class="tab-panel hidden">
+    <div class="font-mono text-xs text-amber-400 mb-4">// DÉMONSTRATION</div>
+    <h2 class="font-display text-2xl text-white mb-6">Interface &amp; Métriques de Performance</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4" data-reveal>
+      <!-- TODO: Insérer screenshots/mockups de l'interface utilisateur -->
+      <div class="aspect-[9/16] bg-blue-900/60 border border-white/10 rounded-lg flex items-center justify-center">
+        <span class="font-mono text-xs text-slate-500 text-center px-4">// SCREENSHOT 1</span>
+      </div>
+      <div class="aspect-[9/16] bg-blue-900/60 border border-white/10 rounded-lg flex items-center justify-center">
+        <span class="font-mono text-xs text-slate-500 text-center px-4">// SCREENSHOT 2</span>
+      </div>
+      <div class="aspect-[9/16] bg-blue-900/60 border border-white/10 rounded-lg flex items-center justify-center">
+        <span class="font-mono text-xs text-slate-500 text-center px-4">// SCREENSHOT 3</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-8">
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Métrique — temps d'inférence moyen -->
+        <p class="text-slate-500 text-sm">Temps d'inférence (ms)</p>
+      </div>
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Métrique — taux de précision du modèle -->
+        <p class="text-slate-500 text-sm">Taux de précision (%)</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-600">
+    <span>© 2025 — Compilé avec précision.</span>
+    <a href="../index.html" class="hover:text-amber-400 transition-colors">← Retour au portfolio</a>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

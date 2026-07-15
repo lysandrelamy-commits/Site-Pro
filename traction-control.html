@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contrôle de Traction — Formula Student | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        blue: { 950: '#0A1220', 900: '#0F1B2E', 850: '#132340' },
+        amber: { 400: '#FFB020', 500: '#F59300' },
+      },
+      fontFamily: {
+        display: ['Space Grotesk', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body class="bg-blue-950 text-slate-300 font-display antialiased">
+
+<div class="fixed inset-0 bg-blueprint-grid pointer-events-none z-0"></div>
+
+<nav class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur-md bg-blue-950/85">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="../index.html" class="font-mono text-xs tracking-wider text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+      ← RETOUR AU PORTFOLIO
+    </a>
+    <a href="https://github.com/" target="_blank" class="text-xs font-mono px-4 py-2 bg-amber-400 text-blue-950 rounded font-semibold hover:bg-amber-300 transition-colors">
+      GitHub Repo ↗
+    </a>
+  </div>
+</nav>
+
+<header class="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-16">
+  <div class="flex flex-wrap gap-2 mb-6 font-mono text-[11px]">
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">EMBARQUÉ</span>
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">MATLAB/SIMULINK</span>
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">DYNAMIQUE VÉHICULE</span>
+    <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">STM32</span>
+  </div>
+  <h1 class="font-display text-3xl md:text-5xl font-semibold text-white leading-tight max-w-3xl">
+    Système de Contrôle de Traction &amp; Télémétrie<br />
+    <span class="text-amber-400">— Monoplace Formula Student</span>
+  </h1>
+</header>
+
+<div class="sticky top-16 z-40 border-y border-white/5 bg-blue-950/95 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 flex gap-1 overflow-x-auto font-mono text-xs">
+    <button data-tab="project-overview" class="tab-btn active whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">VUE GÉNÉRALE</button>
+    <button data-tab="matlab-simulink-block" class="tab-btn whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">MODÉLISATION MATLAB</button>
+    <button data-tab="hardware-firmware-block" class="tab-btn whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">HARDWARE &amp; FIRMWARE</button>
+    <button data-tab="telemetry-results-block" class="tab-btn whitespace-nowrap px-5 py-4 border-b-2 border-transparent text-slate-400 hover:text-amber-400 transition-colors">TÉLÉMÉTRIE &amp; PISTE</button>
+  </div>
+</div>
+
+<main class="relative z-10 max-w-6xl mx-auto px-6 py-16">
+
+  <section id="project-overview" class="tab-panel">
+    <div class="font-mono text-xs text-amber-400 mb-4">// CONTEXTE</div>
+    <h2 class="font-display text-2xl text-white mb-6">Vue générale du projet</h2>
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+      <div class="border border-white/10 rounded-lg p-6 bg-blue-900/40">
+        <h3 class="font-display text-white mb-3">Contexte</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          <!-- TODO: Décrire le contexte du projet — monoplace thermique vs électrique, équipe Formula Student, contraintes du règlement. -->
+          Développé dans le cadre de la compétition Formula Student, ce projet vise à équiper la monoplace d'un système de contrôle de traction adapté à la fois à la version thermique et à la version électrique du véhicule.
+        </p>
+      </div>
+      <div class="border border-white/10 rounded-lg p-6 bg-blue-900/40">
+        <h3 class="font-display text-white mb-3">Objectif</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          <!-- TODO: Préciser les objectifs chiffrés si disponibles (gain de temps au tour, % réduction de patinage). -->
+          Gagner du temps au tour et réduire le patinage en sortie de virage grâce à une régulation de couple moteur en temps réel, basée sur l'estimation du glissement pneumatique.
+        </p>
+      </div>
+    </div>
+
+    <div class="placeholder-card" data-reveal>
+      <!-- TODO: Ajouter ici un schéma de synthèse du système (diagramme bloc entrée/sortie) -->
+      <p class="text-slate-500 text-sm">Emplacement réservé pour le schéma de synthèse du système.</p>
+    </div>
+  </section>
+
+  <section id="matlab-simulink-block" class="tab-panel hidden">
+    <div class="font-mono text-xs text-amber-400 mb-4">// MODÉLISATION</div>
+    <h2 class="font-display text-2xl text-white mb-6">Modélisation MATLAB / Simulink</h2>
+
+    <div class="placeholder-card mb-6" data-reveal>
+      <!-- TODO: Insérer capture du modèle Simulink complet -->
+      <p class="text-slate-500 text-sm">Emplacement réservé : schéma du modèle Simulink.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Insérer les équations différentielles du glissement pneumatique -->
+        <p class="text-slate-500 text-sm">Emplacement réservé : équations différentielles du glissement pneumatique.</p>
+      </div>
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Insérer le détail de la logique de commande (floue / PID) -->
+        <p class="text-slate-500 text-sm">Emplacement réservé : logique floue / PID.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="hardware-firmware-block" class="tab-panel hidden">
+    <div class="font-mono text-xs text-amber-400 mb-4">// ARCHITECTURE MATÉRIELLE</div>
+    <h2 class="font-display text-2xl text-white mb-6">Hardware &amp; Firmware</h2>
+
+    <div class="placeholder-card mb-6" data-reveal>
+      <!-- TODO: Insérer schéma d'architecture CAN Bus -->
+      <p class="text-slate-500 text-sm">Emplacement réservé : schéma d'architecture CAN Bus.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails microcontrôleur STM32 (référence, fréquence, périphériques utilisés) -->
+        <p class="text-slate-500 text-sm">Emplacement réservé : microcontrôleur STM32.</p>
+      </div>
+      <div class="placeholder-card" data-reveal>
+        <!-- TODO: Détails capteurs de vitesse de roues (type, résolution, emplacement) -->
+        <p class="text-slate-500 text-sm">Emplacement réservé : capteurs de vitesse de roues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="telemetry-results-block" class="tab-panel hidden">
+    <div class="font-mono text-xs text-amber-400 mb-4">// RÉSULTATS</div>
+    <h2 class="font-display text-2xl text-white mb-6">Télémétrie &amp; Résultats sur Piste</h2>
+
+    <div class="placeholder-card mb-6" data-reveal>
+      <!-- TODO: Insérer graphiques de comparaison de télémétrie (sans contrôle de traction vs avec) -->
+      <p class="text-slate-500 text-sm">Emplacement réservé : graphiques comparatifs (sans / avec contrôle de traction).</p>
+    </div>
+
+    <div class="aspect-video bg-blue-900/60 border border-white/10 rounded-lg flex items-center justify-center" data-reveal>
+      <!-- TODO: Intégrer vidéo/GIF de la voiture en essais sur piste -->
+      <span class="font-mono text-xs text-slate-500">// EMPLACEMENT VIDÉO — Essais sur piste</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-600">
+    <span>© 2025 — Compilé avec précision.</span>
+    <a href="../index.html" class="hover:text-amber-400 transition-colors">← Retour au portfolio</a>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

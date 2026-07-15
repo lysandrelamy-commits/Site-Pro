@@ -1,421 +1,227 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W6C6SJN7');</script>
-<!-- End Google Tag Manager -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Synk-R Solutions — Automatisation d'entreprise</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio — Ingénierie Systèmes, Dynamique Véhicule & IA Embarquée</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        blue: { 950: '#0A1220', 900: '#0F1B2E', 850: '#132340' },
+        amber: { 400: '#FFB020', 500: '#F59300' },
+      },
+      fontFamily: {
+        display: ['Space Grotesk', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6C6SJN7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-    <ul class="nav-links">
-    <li><a href="#accueil">Accueil</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pourquoi">Pourquoi nous</a></li>
-    <li><a href="#contact">Contact</a></li>
+<body class="bg-blue-950 text-slate-300 font-display antialiased">
+
+<div class="fixed inset-0 bg-blueprint-grid pointer-events-none z-0"></div>
+
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur-md bg-blue-950/80">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="font-mono text-sm tracking-widest text-amber-400">/// PORTFOLIO</a>
+    <ul class="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider text-slate-400">
+      <li><a href="#about" class="hover:text-amber-400 transition-colors">01_À PROPOS</a></li>
+      <li><a href="#projects" class="hover:text-amber-400 transition-colors">02_PROJETS</a></li>
+      <li><a href="#skills" class="hover:text-amber-400 transition-colors">03_COMPÉTENCES</a></li>
+      <li><a href="#contact" class="hover:text-amber-400 transition-colors">04_CONTACT</a></li>
     </ul>
-    <a href="#contact" class="btn-nav">Demander une démo</a>
-    <a href="#" class="logo logo-nav">
-    <img src="logo_v2.png" alt="Synk-R Solutions" />
-    </a>
-    <button class="burger" id="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="https://github.com/" target="_blank" class="text-xs font-mono px-4 py-2 border border-white/10 rounded hover:border-amber-400/50 hover:text-amber-400 transition-colors">GitHub ↗</a>
+      <a href="https://linkedin.com/" target="_blank" class="text-xs font-mono px-4 py-2 bg-amber-400 text-blue-950 rounded font-semibold hover:bg-amber-300 transition-colors">LinkedIn ↗</a>
+    </div>
+    <button id="burger" class="md:hidden flex flex-col gap-1.5 p-2">
+      <span class="w-5 h-px bg-slate-300"></span>
+      <span class="w-5 h-px bg-slate-300"></span>
+      <span class="w-5 h-px bg-slate-300"></span>
     </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="#accueil" class="mobile-link">Accueil</a></li>
-        <li><a href="#services" class="mobile-link">Services</a></li>
-        <li><a href="#pourquoi" class="mobile-link">Pourquoi nous</a></li>
-        <li><a href="#contact" class="mobile-link">Contact</a></li>
-        <li><a href="#contact" class="mobile-link btn-mobile">Demander une démo</a></li>
-      </ul>
-    </div>
-  </nav>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-white/5 px-6 py-4 flex flex-col gap-4 font-mono text-xs text-slate-400">
+    <a href="#about">01_À PROPOS</a>
+    <a href="#projects">02_PROJETS</a>
+    <a href="#skills">03_COMPÉTENCES</a>
+    <a href="#contact">04_CONTACT</a>
+    <a href="https://github.com/" class="text-amber-400">GitHub ↗</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section id="accueil" class="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Automatisation professionnelle
-      </div>
-      <h1 class="hero-title">
-        Vos processus,<br /><em>automatisés.</em><br />Votre temps,<span class="accent"> libéré.</span>
-      </h1>
-      <p class="hero-desc">
-        Nous concevons des systèmes d'automatisation sur mesure pour les entreprises : génération de devis, relance de paiements, rapports d'activité et bien plus encore.
+<section id="top" class="relative z-10 max-w-6xl mx-auto px-6 pt-40 pb-28">
+  <div class="inline-flex items-center gap-2 font-mono text-xs text-amber-400 border border-amber-400/30 bg-amber-400/5 rounded-full px-4 py-1.5 mb-8">
+    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+    EN RECHERCHE DE STAGE D'ÉLITE — R&D / F1 / ROBOTIQUE / EDGE AI
+  </div>
+
+  <h1 class="font-display text-4xl md:text-6xl font-semibold text-white leading-[1.05] max-w-4xl mb-8">
+    Ingénierie Systèmes,<br />
+    Dynamique Véhicule<br />
+    <span class="text-amber-400">&amp; IA Embarquée.</span>
+  </h1>
+
+  <p class="text-slate-400 text-lg max-w-2xl mb-10 leading-relaxed">
+    Étudiant à l'UTC <span class="text-slate-300">(Génie Mécanique &amp; Génie Informatique)</span>.
+    Je conçois des architectures matérielles et logicielles haute performance où le code rencontre le monde physique.
+  </p>
+
+  <div class="flex flex-wrap gap-4">
+    <a href="#projects" class="inline-flex items-center gap-2 bg-amber-400 text-blue-950 font-semibold text-sm px-6 py-3.5 rounded hover:bg-amber-300 transition-colors">
+      Explorer mes projets →
+    </a>
+    <a href="#" class="inline-flex items-center gap-2 border border-white/15 text-slate-200 font-mono text-sm px-6 py-3.5 rounded hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+      Télécharger CV (PDF)
+    </a>
+  </div>
+
+  <div class="mt-24 flex items-center gap-4 font-mono text-xs text-slate-600">
+    <span>SYS.STATUS</span>
+    <span class="flex-1 h-px bg-gradient-to-r from-slate-700 to-transparent"></span>
+    <span class="text-amber-400/70">ONLINE</span>
+  </div>
+</section>
+
+<section id="about" class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-[auto_1fr] gap-10 md:gap-16">
+    <div class="font-mono text-xs text-amber-400 tracking-widest whitespace-nowrap pt-1">01 / À PROPOS</div>
+    <div class="max-w-3xl">
+      <h2 class="font-display text-2xl md:text-3xl text-white mb-6">
+        Un ingénieur qui pense en systèmes, du châssis au silicium.
+      </h2>
+      <p class="text-slate-400 leading-relaxed mb-4">
+        Formé au croisement du génie mécanique et du génie informatique à l'UTC, je m'intéresse aux problèmes où la mécanique, l'électronique et le logiciel doivent fonctionner comme un seul système cohérent : régulation temps réel, acquisition de données, ou inférence embarquée sous contrainte de ressources.
       </p>
-      <div class="hero-cta">
-        <a href="#services" class="btn-primary">Découvrir nos services</a>
-        <a href="#contact" class="btn-ghost">Prendre contact →</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <strong>−80%</strong>
-          <span>de tâches manuelles</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>×3</strong>
-          <span>de productivité</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>24/7</strong>
-          <span>fonctionnement</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="flow-card fc1">
-        <div class="fc-icon">📄</div>
-        <div class="fc-text"><strong>Nouveau client</strong><small>Devis généré en 2 sec</small></div>
-        <div class="fc-status ok">✓</div>
-      </div>
-      <div class="flow-line"></div>
-      <div class="flow-card fc2">
-        <div class="fc-icon">📧</div>
-        <div class="fc-text"><strong>Facture impayée</strong><small>Relance envoyée auto.</small></div>
-        <div class="fc-status ok">✓</div>
-      </div>
-      <div class="flow-line"></div>
-      <div class="flow-card fc3">
-        <div class="fc-icon">📊</div>
-        <div class="fc-text"><strong>Rapport mensuel</strong><small>Généré & transmis</small></div>
-        <div class="fc-status ok">✓</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="services">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Nos services</div>
-        <h2>Ce que nous automatisons<br /><em>pour vous</em></h2>
-        <p>Des solutions opérationnelles, intégrées à vos outils existants, sans perturbation de votre activité.</p>
-      </div>
-      <div class="services-grid">
-
-        <a href="service-devis.html" class="service-card sc-featured sc-clickable">
-          <div class="sc-top">
-            <div class="sc-icon">⚡</div>
-            <div class="sc-badge">Populaire</div>
-          </div>
-          <h3>Génération automatique de devis</h3>
-          <p>À partir d'un formulaire ou d'une demande entrante, un devis personnalisé et professionnel est généré et envoyé en quelques secondes, sans intervention humaine.</p>
-          <ul class="sc-list">
-            <li>Modèles personnalisés à votre charte</li>
-            <li>Envoi automatique par email ou PDF</li>
-            <li>Intégration CRM / ERP</li>
-            <li>Suivi d'acceptation en temps réel</li>
-          </ul>
-          <span class="sc-link">En savoir plus →</span>
-        </a>
-
-        <a href="service-relance.html" class="service-card sc-clickable">
-          <div class="sc-top">
-            <div class="sc-icon">📬</div>
-          </div>
-          <h3>Relance automatique des impayés</h3>
-          <p>Détection des factures échues et envoi de relances par email à intervalles configurables, avec escalade progressive du ton jusqu'au règlement.</p>
-          <ul class="sc-list">
-            <li>Scénarios de relance personnalisables</li>
-            <li>Escalade automatique (J+7, J+15…)</li>
-            <li>Journalisation des échanges</li>
-            <li>Notification équipe comptable</li>
-          </ul>
-          <span class="sc-link">En savoir plus →</span>
-        </a>
-
-        <a href="service-rapports.html" class="service-card sc-clickable">
-          <div class="sc-top">
-            <div class="sc-icon">📊</div>
-          </div>
-          <h3>Rapports mensuels d'activité</h3>
-          <p>Consolidation automatique de vos données (ventes, tickets, KPIs) et génération d'un rapport mis en page, prêt à partager avec la direction ou les équipes.</p>
-          <ul class="sc-list">
-            <li>Connexion à vos sources de données</li>
-            <li>Mise en page professionnelle</li>
-            <li>Envoi programmé (email / Slack)</li>
-            <li>Tableaux de bord interactifs en option</li>
-          </ul>
-          <span class="sc-link">En savoir plus →</span>
-        </a>
-
-        <a href="service-site-vitrine.html" class="service-card sc-clickable">
-          <div class="sc-top">
-            <div class="sc-icon">🌐</div>
-          </div>
-          <h3>Site vitrine professionnel</h3>
-          <p>Un site internet clé en main, pensé pour les artisans et PME, avec des automatisations intégrées dès la conception pour capter et gérer vos prospects sans effort.</p>
-          <ul class="sc-list">
-            <li>Design professionnel adapté à votre activité</li>
-            <li>Formulaire de contact connecté à votre boîte mail</li>
-            <li>Automatisations intégrées (devis, relances, rappels)</li>
-            <li>Optimisé mobile & référencement Google (SEO)</li>
-          </ul>
-          <span class="sc-link">En savoir plus →</span>
-        </a>
-
-        <a href="service-onboarding.html" class="service-card sc-clickable">
-          <div class="sc-top">
-            <div class="sc-icon">🤝</div>
-          </div>
-          <h3>Onboarding client automatisé</h3>
-          <p>Envoi de contrats, collecte de documents, création de comptes et briefing de bienvenue — tout le parcours d'intégration d'un nouveau client, sans effort manuel.</p>
-          <ul class="sc-list">
-            <li>Signature électronique intégrée</li>
-            <li>Collecte de documents sécurisée</li>
-            <li>Emails de bienvenue personnalisés</li>
-            <li>Suivi de l'avancement en tableau de bord</li>
-          </ul>
-          <span class="sc-link">En savoir plus →</span>
-        </a>
-
-        <a href="service-sur-mesure.html" class="service-card sc-custom sc-clickable">
-          <div class="sc-top">
-            <div class="sc-icon">🛠️</div>
-          </div>
-          <h3>Automatisation sur mesure</h3>
-          <p>Vous avez un processus spécifique à automatiser ? Nous l'analysons, le modélisons et le déployons, quelle que soit sa complexité.</p>
-          <div class="sc-cta-block">
-            <p class="sc-cta-text">Parlons de votre cas d'usage.</p>
-            <span class="btn-primary">Découvrir →</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- POURQUOI -->
-  <section id="pourquoi" class="why">
-    <div class="container">
-      <div class="why-inner">
-        <div class="why-left">
-          <div class="section-tag">Pourquoi Synk-R</div>
-          <h2>Des résultats mesurables<br /><em>dès les premières semaines</em></h2>
-          <p>Nos automatisations sont pensées pour s'intégrer rapidement à votre organisation, sans formation complexe ni refonte de vos outils.</p>
-          <div class="why-list">
-            <div class="why-item">
-              <div class="why-icon">🎯</div>
-              <div>
-                <strong>Audit préalable gratuit</strong>
-                <p>Nous cartographions vos processus avant toute intervention pour identifier les gains réels.</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <div class="why-icon">⚙️</div>
-              <div>
-                <strong>Déploiement en moins de 2 semaines</strong>
-                <p>Mise en production rapide, sans perturber votre activité courante.</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <div class="why-icon">🔒</div>
-              <div>
-                <strong>Sécurité & conformité RGPD</strong>
-                <p>Toutes vos données restent sous votre contrôle, hébergées en Europe.</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <div class="why-icon">📞</div>
-              <div>
-                <strong>Support dédié inclus</strong>
-                <p>Un interlocuteur unique, réactif, qui connaît votre configuration.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="why-right">
-          <div class="metrics-box">
-            <div class="metrics-title">Gains moyens constatés</div>
-            <div class="metric-row">
-              <div class="metric-label">Temps administratif économisé</div>
-              <div class="metric-bar-wrap">
-                <div class="metric-bar" style="--w: 80%"></div>
-              </div>
-              <div class="metric-val">80%</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-label">Délai de traitement des devis</div>
-              <div class="metric-bar-wrap">
-                <div class="metric-bar" style="--w: 93%"></div>
-              </div>
-              <div class="metric-val">−93%</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-label">Taux de recouvrement</div>
-              <div class="metric-bar-wrap">
-                <div class="metric-bar" style="--w: 65%"></div>
-              </div>
-              <div class="metric-val">+65%</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-label">Satisfaction équipe</div>
-              <div class="metric-bar-wrap">
-                <div class="metric-bar" style="--w: 88%"></div>
-              </div>
-              <div class="metric-val">+88%</div>
-            </div>
-            <div class="metrics-note">* Basé sur nos estimations</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="process">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Notre méthode</div>
-        <h2>De l'idée à l'automatisation<br /><em>en 4 étapes</em></h2>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3>Audit & cadrage</h3>
-          <p>Analyse de vos processus existants, identification des goulots d'étranglement et chiffrage du ROI potentiel.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>Conception</h3>
-          <p>Modélisation des workflows, choix des outils techniques adaptés à votre écosystème et validation avec vos équipes.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3>Déploiement</h3>
-          <p>Mise en place des automatisations, tests en conditions réelles, formation de vos référents internes.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h3>Suivi & optimisation</h3>
-          <p>Monitoring continu, ajustements, et évolutions au fil de la croissance de votre activité.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-  <div class="container">
-    <div class="contact-inner">
-
-  <!-- GAUCHE : infos -->
-  <div class="contact-left">
-    <div class="section-tag">Contact</div>
-    <h2>Prêt à automatiser<br /><em>votre activité ?</em></h2>
-    <p>Décrivez-nous votre besoin. Nous vous recontactons sous 24h pour un premier échange gratuit et sans engagement.</p>
-    <div class="contact-info">
-      <div class="ci-item">
-        <span class="ci-icon">📧</span>
-        <span>synkr.solutions@gmail.com</span>
-      </div>
-      <div class="ci-item">
-        <span class="ci-icon">📞</span>
-        <span>+33 7 86 62 29 42</span>
-      </div>
-      <div class="ci-item">
-        <span class="ci-icon">📍</span>
-        <span>France — Oise & à distance</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- DROITE : Google Form -->
-  <div class="contact-right">
-    <div class="gform-wrapper">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdVxTWvMW05JuvMSikoTcP6O9P7O5jvKatXf0l4zmMic9t8lA/viewform?embedded=true"
-        width="100%"
-        height="900"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        title="Formulaire de contact Synk-R Solutions">
-        Chargement…
-      </iframe>
-    </div>
-  </div>
-
-</div>
-</div>
+      <p class="text-slate-400 leading-relaxed">
+        Mon terrain de jeu actuel : la dynamique véhicule en compétition Formula Student, et les architectures d'IA embarquée pour des applications à fort enjeu, comme la santé mobile.
+      </p>
     </div>
   </div>
 </section>
-  <!-- FOOTER -->
-  <footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="logo logo-footer">
-          <img src="logo_v2.png" alt="Synk-R Solutions" />
-        </a>
-        <p>Synk-R Solutions — Automatisation professionnelle pour les entreprises ambitieuses.</p>
-      </div>
-      <div class="footer-links">
-        <div class="fl-col">
-          <strong>Navigation</strong>
-          <div class="fl-links-row">
-            <a href="#accueil">Accueil</a>
-            <span class="fl-sep">|</span>
-            <a href="#services">Services</a>
-            <span class="fl-sep">|</span>
-            <a href="#pourquoi">Pourquoi nous</a>
-            <span class="fl-sep">|</span>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-        <div class="fl-col">
-          <strong>Services</strong>
-          <div class="fl-links-row">
-            <a href="#services">Génération de devis</a>
-            <span class="fl-sep">|</span>
-            <a href="#services">Relance impayés</a>
-            <span class="fl-sep">|</span>
-            <a href="#services">Rapports d'activité</a>
-            <span class="fl-sep">|</span>
-            <a href="#services">Sur mesure</a>
-          </div>
-        </div>
-      </div>
+
+<section id="projects" class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 mb-14">
+      <div class="font-mono text-xs text-amber-400 tracking-widest whitespace-nowrap pt-1">02 / PROJETS</div>
+      <h2 class="font-display text-2xl md:text-3xl text-white max-w-2xl">Projets en vedette</h2>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Synk-R Solutions. Tous droits réservés.</span>
-      <div class="footer-legal">
-        <a href="#">Mentions légales</a>
-        <span class="fl-sep">|</span>
-        <a href="#">Politique de confidentialité</a>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <a href="projects/traction-control.html" class="group relative border border-white/10 rounded-lg p-8 bg-blue-900/40 hover:border-amber-400/40 transition-colors flex flex-col">
+        <div class="flex flex-wrap gap-2 mb-6 font-mono text-[11px]">
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">EMBARQUÉ</span>
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">MATLAB/SIMULINK</span>
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">DYNAMIQUE VÉHICULE</span>
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">STM32</span>
+        </div>
+        <h3 class="font-display text-xl text-white mb-3 group-hover:text-amber-400 transition-colors">
+          Contrôle de Traction — Formula Student
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+          Algorithme d'estimation de glissement et régulation de couple temps réel pour monoplaces thermique et électrique.
+        </p>
+        <div class="flex items-center justify-between font-mono text-xs pt-6 border-t border-white/5">
+          <span class="text-amber-400">Voir la fiche détaillée →</span>
+          <span class="text-slate-500 group-hover:text-slate-300 transition-colors">GitHub Repo ↗</span>
+        </div>
+      </a>
+
+      <a href="projects/avc-detection.html" class="group relative border border-white/10 rounded-lg p-8 bg-blue-900/40 hover:border-amber-400/40 transition-colors flex flex-col">
+        <div class="flex flex-wrap gap-2 mb-6 font-mono text-[11px]">
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">COMPUTER VISION</span>
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">PYTORCH</span>
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">SÉCURITÉ &amp; MOBILE</span>
+          <span class="px-2.5 py-1 rounded border border-white/10 text-slate-400">ARCHITECTURE</span>
+        </div>
+        <h3 class="font-display text-xl text-white mb-3 group-hover:text-amber-400 transition-colors">
+          Détection d'AVC — Edge AI
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+          Application médicale mobile bout-en-bout avec inférence d'IA locale, architecture sécurisée et respect des normes RGPD.
+        </p>
+        <div class="flex items-center justify-between font-mono text-xs pt-6 border-t border-white/5">
+          <span class="text-amber-400">Voir la fiche détaillée →</span>
+          <span class="text-slate-500 group-hover:text-slate-300 transition-colors">GitHub Repo ↗</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 mb-14">
+      <div class="font-mono text-xs text-amber-400 tracking-widest whitespace-nowrap pt-1">03 / COMPÉTENCES</div>
+      <h2 class="font-display text-2xl md:text-3xl text-white max-w-2xl">L'hybridation Méca / Info</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="border border-white/10 rounded-lg p-8 bg-blue-900/40">
+        <div class="font-mono text-xs text-amber-400 mb-5">BLOC_01</div>
+        <h3 class="font-display text-lg text-white mb-5">Génie Mécanique &amp; Systèmes</h3>
+        <ul class="space-y-3 font-mono text-sm text-slate-400">
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>CAO / SolidWorks</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>Dynamique Véhicule</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>Acquisition de données / Télémétrie</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>MATLAB / Simulink</li>
+        </ul>
+      </div>
+      <div class="border border-white/10 rounded-lg p-8 bg-blue-900/40">
+        <div class="font-mono text-xs text-amber-400 mb-5">BLOC_02</div>
+        <h3 class="font-display text-lg text-white mb-5">Génie Informatique &amp; IA</h3>
+        <ul class="space-y-3 font-mono text-sm text-slate-400">
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>Python, C / C++</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>PyTorch</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>Edge AI / TensorFlow Lite</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>Git / CI-CD</li>
+          <li class="flex items-center gap-3"><span class="w-1 h-1 bg-amber-400 rounded-full"></span>Architectures Sécurisées</li>
+        </ul>
       </div>
     </div>
   </div>
+</section>
+
+<section id="contact" class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+    <div class="font-mono text-xs text-amber-400 tracking-widest mb-6">04 / CONTACT</div>
+    <h2 class="font-display text-2xl md:text-4xl text-white mb-6">Discutons de votre prochain projet.</h2>
+    <p class="text-slate-400 max-w-xl mx-auto mb-10">
+      Ouvert aux opportunités de stage en R&D, sport automobile, robotique ou IA embarquée.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="mailto:contact@example.com" class="inline-flex items-center gap-2 bg-amber-400 text-blue-950 font-semibold text-sm px-6 py-3.5 rounded hover:bg-amber-300 transition-colors">
+        Envoyer un email
+      </a>
+      <a href="https://linkedin.com/" target="_blank" class="inline-flex items-center gap-2 border border-white/15 text-slate-200 font-mono text-sm px-6 py-3.5 rounded hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+        LinkedIn ↗
+      </a>
+      <a href="https://github.com/" target="_blank" class="inline-flex items-center gap-2 border border-white/15 text-slate-200 font-mono text-sm px-6 py-3.5 rounded hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+        GitHub ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="relative z-10 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-600">
+    <span>© 2025 — Compilé avec précision.</span>
+    <span class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-amber-400/70 animate-pulse"></span>
+      Hébergé sur GitHub Pages
+    </span>
+  </div>
 </footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
